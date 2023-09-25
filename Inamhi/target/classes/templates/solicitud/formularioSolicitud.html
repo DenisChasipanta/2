@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEGUIMIENTOS DE SOLICITUDES</title>
+</head>
+<body>
+<div class="container mt-3">
+    <h2>Stacked form</h2>
+    <form th:action="@{/solicitud/formularioSolicitud}" method="post" th:object="${solicitudes}">
+        <div class="mb-3 mt-3">
+            <label >CÓDIGO:</label>
+            <input type="number" class="form-control" placeholder="Enter id" th:field="*{codigo}" readonly="readonly">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >FECHA DE CREACIÓN:</label>
+            <input type="date" class="form-control"  placeholder="Enter nombre" th:field="*{fechaCreacion}">
+        </div>
+        <div class="mb-3">
+            <label >NOMBRE DE LA PERSONA:</label>
+            <input type="text" class="form-control"  placeholder="Enter editor_id" th:field="*{persona.nombreDelFuncionario}" >
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

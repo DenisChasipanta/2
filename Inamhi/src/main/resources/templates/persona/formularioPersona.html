@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOLICITUD DE EQUIPOS TIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!--<div class="border border-success p-2 mb-2">UNIDAD DE TECNOLOGÍA DE LA INFORMACIÓN Y COMUNICACIÓN
+    FORMATO DE REVISIÓN DE EQUIPOS DE CÓMPUTO</div>
+<div class="border border-success p-2 mb-2">REGISTRO</div>-->
+
+<!--ESTO SOLO ES DE PRUEBA-->
+
+    <!--<h2>REGISTRO</h2>-->
+    <form th:action="@{/persona/formularioPersona}" method="post" th:object="${personas}">
+        <div class="mb-3 mt-3">
+            <label >NÚMERO DE CÓDIGO:</label>
+            <input type="number" class="form-control" placeholder="" th:field="*{numCodigo}" readonly="readonly">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >CÓDIGO:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{codigo}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >NOMBRE DEL FUNCIONARIO:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{nombreDelFuncionario}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >DIRECCION/UNIDAD:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{direccion}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >E-MAIL:</label>
+            <input type="email" class="form-control"  placeholder="" th:field="*{email}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >TIPO DE REGISTRO:</label>
+            <!--<input type="text" class="form-control"  placeholder="Enter nombre" th:field="*{tipoRegistro}">-->
+            <select class="form-select">
+                <option></option>
+                <option>SALIDA DE ACTIVO</option>
+                <option>ENTRADA DE ACTIVO</option>
+            </select>
+        </div>
+        <div class="mb-3 mt-3">
+            <label >FECHA:</label>
+            <input type="date" class="form-control"  placeholder="" th:field="*{fecha}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >TIPO DE EQUIPO:</label>
+            <!--<input type="text" class="form-control"  placeholder="Enter nombre" th:field="*{tipoEquipo}">-->
+            <select class="form-select">
+                <option></option>
+                <option>LAPTOP</option>
+                <option>PC DE ESCRITORIO</option>
+            </select>
+        </div>
+        <div class="mb-3 mt-3">
+            <label >SISTEMA OPERATIVO:</label>
+            <!--<input type="text" class="form-control"  placeholder="" th:field="*{sistemaOperativo}">-->
+            <select class="form-select">
+                <option></option>
+                <option>LAPTOP</option>
+                <option>PC DE ESCRITORIO</option>
+            </select>
+
+        </div>
+        <div class="mb-3 mt-3">
+            <label >PROCESADOR:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{procesador}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >TIPO DE DISCO:</label>
+            <!--<input type="text" class="form-control"  placeholder="Enter nombre" th:field="*{tipoDisco}">-->
+            <select class="form-select">
+                <option></option>
+                <option>HDD</option>
+                <option>SSD</option>
+            </select>
+        </div>
+        <div class="mb-3 mt-3">
+            <label >RAM:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{ram}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >CAPACIDAD DE DISCO:</label>
+            <!--<input type="text" class="form-control"  placeholder="Enter nombre" th:field="*{capacidadDisco}">-->
+            <select class="form-select">
+                <option></option>
+                <option>128GB</option>
+                <option>250GB</option>
+                <option>300GB</option>
+                <option>500GB</option>
+                <option>750GB</option>
+                <option>1TB</option>
+                <option>2TB</option>
+            </select>
+        </div>
+        <!-- Prueba-->
+        <div class="mb-3 mt-3">
+            <label >DISCO DURO/SSD:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{discoDuro1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{discoDuro2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{discoDuro3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{discoDuro4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{discoDuro5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >CASE:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{case1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{case2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{case3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{case4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{case5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >MONITOR:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{monitor1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{monitor2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{monitor3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{monitor4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{monitor5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >TECLADO:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{teclado1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{teclado2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{teclado3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{teclado4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{teclado5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >MOUSE:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{maouse1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{maouse2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{maouse3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{maouse4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{maouse5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >UPS:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{ups1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{ups2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{ups3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{ups4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{ups5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >PARLANTES:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{parlantes1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{parlantes2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{parlantes3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{parlantes4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{parlantes5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >MEMORIA RAM:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{memoriaRam1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{memoriaRam2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{memoriaRam3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{memoriaRam4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{memoriaRam5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >CAMARA:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{camara1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{camara2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{camara3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{camara4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{camara5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >BATERIA:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{bateria1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{bateria2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{bateria3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{bateria4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{bateria5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >CARAGADOR PORTATIL:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{cargadorPortatil1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{cargadorPortatil2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{cargadorPortatil3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{cargadorPortatil4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{cargadorPortatil5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >MICRÓFONO:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{microfono1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{microfono2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{microfono3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{microfono4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{microfono5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >TARJETA RED:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{tarjetaRed1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{tarjetaRed2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{tarjetaRed3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{tarjetaRed4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{tarjetaRed5}">
+        </div>
+
+
+        <div class="mb-3 mt-3">
+            <label >FUNCIONA correctamente?:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >OBSERVACIONES?:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones1}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones2}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones3}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones4}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones5}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >FUNCIONA correctamente?:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente11}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente12}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente13}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente14}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{funcionaCorrectamente15}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label >OBSERVACIONES?:</label>
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones11}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones12}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones13}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones14}">
+            <input type="text" class="form-control"  placeholder="" th:field="*{observaciones15}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
